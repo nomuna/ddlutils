@@ -560,6 +560,7 @@ public class Table implements Serializable
      */
     public Column findColumn(String name, boolean caseSensitive)
     {
+        name = name.replace("\"", "");
         for (Iterator it = _columns.iterator(); it.hasNext(); )
         {
             Column column = (Column)it.next();
