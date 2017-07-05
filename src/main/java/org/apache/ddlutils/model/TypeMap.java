@@ -178,6 +178,10 @@ public abstract class TypeMap
      */
     public static String getJdbcTypeName(int typeCode)
     {
+        if (typeCode == 2009) {
+            typeCode = java.sql.Types.VARCHAR;
+        }
+
         return (String)_typeCodeToTypeName.get(new Integer(typeCode));
     }
 

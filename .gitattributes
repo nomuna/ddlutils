@@ -1,0 +1,23 @@
+# Convert OS specific line endings to UNIX line ending.
+
+# consider everything as text except the ones marked explicitly as binary and ensure LF as line ending
+# on checkout and on commit.
+* text eol=lf
+
+# binary = -text -diff
+# If these files are not marked as binary, and changes are made to these files git will
+# make a text mode diff. By marking them as binary explicitly we ensure that diff on binary files
+# shows the message 'binary files differ' instead of switching to a diff view.
+
+*.png  binary
+*.jpeg binary
+*.jpg  binary
+*.ico  binary
+*.gif  binary
+*.tiff binary
+*.woff binary
+*.woff2 binary
+*.ttf  binary
+*.eot  binary
+*.ico  binary
+*.bmp  binary
